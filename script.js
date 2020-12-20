@@ -22,6 +22,6 @@ btnStop.addEventListener('click', () => {
 btnReset.addEventListener('click', () => {
     btnStart.disabled = false;
     pause = 0;
-    output(0);
+    txtTimer.textContent = '00:00:000';
     clearInterval(interval);
 });
