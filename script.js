@@ -8,7 +8,8 @@ btnStart.addEventListener('click', () => {
     btnStart.disabled = true;
     start = Date.now() - pause;
     interval = setInterval(() => {
-        output(Date.now() - start);
+        let ms = Date.now() - start;
+        txtTimer.textContent = new Date(Date.now() - start).toISOString().substr(14, 9);
     }, 1);
 });
 
@@ -24,9 +25,3 @@ btnReset.addEventListener('click', () => {
     output(0);
     clearInterval(interval);
 });
-
-
-function output(ms) {
-    txtTimer.textContent = new Date(ms).toISOString().substr(14, 9);
-}
-
