@@ -21,7 +21,6 @@ btnStop.addEventListener('click', () => {
 btnReset.addEventListener('click', () => {
     btnStart.disabled = false;
     pause = 0;
-    // start = Date.now();
     output(0);
     clearInterval(interval);
 });
